@@ -37,7 +37,10 @@ public class Deck implements Iterable<Card>{
 
 	@Override
 	public Iterator<Card> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		return cards.iterator();
+	}
+	
+	public Stack<Card> getCards() {
+		return cards;
 	}
 }
