@@ -1,8 +1,9 @@
 package cards;
 
+import java.util.Iterator;
 import java.util.Stack;
 
-public class Deck {
+public class Deck implements Iterable<Card>{
 
 	private Stack<Card> cards;
 	private int numCards;
@@ -32,5 +33,11 @@ public class Deck {
 	
 	public void resetDeck() {
 		initDeck();
+	}
+
+	@Override
+	public Iterator<Card> iterator() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
