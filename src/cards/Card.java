@@ -10,4 +10,5 @@ public class Card {
 		this.denom = denom;
 	}
 	
+	
 }

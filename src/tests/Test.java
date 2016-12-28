@@ -12,10 +12,11 @@ public class Test {
 		// TODO Auto-generated method stub
 		Deck deck = new Deck();
 		Iterator<Card> iter = deck.iterator();
-		while (iter.hasNext())
-		{
+		
+		while (iter.hasNext()) {
 			System.out.println(iter.next());
 		}
+		
 		System.out.println("hi");
 	}
 }

@@ -35,7 +35,6 @@ public class Deck implements Iterable<Card>{
 		initDeck();
 	}
 
-	@Override
 	public Iterator<Card> iterator() {
 		return cards.iterator();
 	}
