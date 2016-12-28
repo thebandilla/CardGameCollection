@@ -1,5 +1,8 @@
 package cards;
 
-public class Suit {
-
+public enum Suit {
+	SPADES,
+	CLUBS,
+	DIAMONDS,
+	HEARTS;
 }
