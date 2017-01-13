@@ -10,5 +10,10 @@ public class Card {
 		this.denom = denom;
 	}
 	
+	@Override
+	public String toString() {
+		return denom.toString() + " of " + suit.toString();
+	}
+	
 	
 }
