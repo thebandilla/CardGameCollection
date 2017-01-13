@@ -12,6 +12,10 @@ public class Card {
 	
 	@Override
 	public String toString() {
+		//returns the string derived by the denomination and suit of this card
+		//eg. if suit == hearts and denom == three
+		//this method would return the string representation of the denomination concatenated with the suit
+		// "THREE of HEARTS"
 		return denom.toString() + " of " + suit.toString();
 	}
 	

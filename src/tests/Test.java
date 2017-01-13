@@ -11,9 +11,11 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Deck deck = new Deck();
+		// get the iterator
 		Iterator<Card> iter = deck.iterator();
 		
 		while (iter.hasNext()) {
+			//calls the tostring method for each element in the iterator
 			System.out.println(iter.next());
 		}
 		
