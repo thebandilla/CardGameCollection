@@ -19,6 +19,4 @@ public enum Denomination {
 	Denomination (String str) {
 		name = str;
 	}
-	
-	public final String getName() { return name; }
 }
