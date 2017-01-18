@@ -1,6 +1,9 @@
 package cards;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
 import java.util.Stack;
 
 public class Deck implements Iterable<Card>{
@@ -28,6 +31,22 @@ public class Deck implements Iterable<Card>{
 	}
 	
 	public void shuffle() {
+		List<Stack<Card>> temp = new ArrayList<Stack<Card>>(10);
+		
+		for (int i = 0; i < 10; i++)
+			temp.add(i, new Stack<Card>());
+		
+		while (!cards.isEmpty()) {
+			Random rand = new Random();
+			int distributor = rand.nextInt();
+			temp.get(Math.abs(distributor % 10)).push(cards.pop());
+		}
+		
+		for (Stack<Card> s : temp) {
+			while (!s.isEmpty()) {
+				cards.push(s.pop());
+			}
+		}
 		
 	}
 	
