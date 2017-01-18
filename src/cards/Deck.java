@@ -26,11 +26,11 @@ public class Deck implements Iterable<Card>{
 				cards.push(new Card(s, d));
 			}
 		}
-		
 		numCards = 52;
 	}
 	
 	public void shuffle() {
+		
 		List<Stack<Card>> temp = new ArrayList<Stack<Card>>(10);
 		
 		for (int i = 0; i < 10; i++)
@@ -47,7 +47,15 @@ public class Deck implements Iterable<Card>{
 				cards.push(s.pop());
 			}
 		}
-		
+	}
+	
+	public Card draw() throws DeckEmptyException {
+		if (numCards == 0)
+			throw new DeckEmptyException();
+		else {
+			numCards--;
+			return cards.pop();
+		}
 	}
 	
 	public void resetDeck() {
