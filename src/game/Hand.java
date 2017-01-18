@@ -10,14 +10,21 @@ public class Hand {
 	private List<Card> cards;
 	private int size;
 	
-	public Hand (Card card) {
-		this.cards = new ArrayList<Card>(1);
-		this.cards.add(card);
-		size = 1;
+	public Hand() {
+		this.cards = new ArrayList<Card>();
+		this.size = 0;
 	}
 	
-	public Hand (List<Card> cards) {
-		this.cards = cards;
-		size = cards.size();
+	public void addCard(Card card) {
+		cards.add(card);
+	}
+	
+	public void addCard(List<Card> cards) {
+		this.cards.addAll(cards);
+	}
+	
+	public void printHand() {
+		for(Card c : cards)
+			System.out.println(c);
 	}
 }
