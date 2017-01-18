@@ -19,6 +19,26 @@ public class Test {
 			System.out.println(iter.next());
 		}
 		
+		deck.shuffle();
+		
+		iter = deck.iterator();
+		
+		System.out.println();
+		
+		while(iter.hasNext()) {
+			System.out.println(iter.next());
+		}
+		
+		deck.shuffle();
+		
+		iter = deck.iterator();
+		
+		System.out.println();
+		
+		while(iter.hasNext()) {
+			System.out.println(iter.next());
+		}
+		
 		System.out.println("hi");
 	}
 }
